@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecimento atual.</title>
+    <style>
+        body {
+            background-color: rgb(174, 129, 216);
+            color: white;
+            font: normal 12pt cambria; 
+
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+            
+        }
+        p {
+            color: rgb(45, 45, 45);
+            font: normal 10pt impact;
+        }
+        div#apertar {
+            font: normal 20pt impact;
+            background: greenyellow;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+        }
+        input{
+            font: normal 13px cambria;
+            width: 100px;
+            height: 20px;
+            margin-top: 10px;
+        }
+        div#res{
+            margin-top: 10px;
+            font: normal 14pt cambria;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Revisando meu conhecimentos atuais:</h1>
+    <p>Data: 15/06/2024</p>
+   <div id="apertar">Clique</div>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name=" txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado:</div>
+
+    <script> 
+      var nome = window.prompt('Qual seu nome?')
+      document.write(`Eae ${nome}, aqui é meu primeiro exercício, usando todos meus conhecimentos atuais.`)
+
+     var a = window.document.getElementById('apertar')
+      a.addEventListener('click', clicar)
+      a.addEventListener('mouseenter', entrar)
+      a.addEventListener('mouseout', sair)
+
+      function clicar(){
+        a.innerText = 'Clicou'
+        a.style.background = 'red'
+      }
+      function entrar(){
+        a.innerText = 'Entrou'
+        a.style.background = 'Blue'
+      }
+      function sair(){
+        a.innerText = 'Saiu'
+        a.style.background = 'black'
+      }
+       
+      function somar(){
+      var tn1 = window.document.getElementById('txtn1')
+      var tn2 = window.document.getElementById('txtn2')
+      var res = window.document.getElementById('res')
+      var n1 = Number(tn1.value)
+      var n2 = Number(tn2.value)
+      var s = n1 + n2
+      res.innerHTML = `O resultado da soma entre ${n1} + ${n2} é  igual a <strong>${s}</strong>.`
+    }
+
+    </script>
+    
+</body>
+</html>
